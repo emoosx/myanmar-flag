@@ -1,0 +1,66 @@
+@import 'colors';
+
+.flag {
+  position: relative;
+  max-width: 30em;
+  section {
+    height: 6em;
+  }
+  .star-wrapper {
+    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -25%;
+    .star {
+      width: 0;
+      height: 0;
+      display: block;
+      border-left: 100px solid transparent;
+      border-bottom: 70px solid $white;
+      border-right: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+    &:before {
+      content: '';
+      height: 0;
+      width: 0;
+      position: absolute;
+      display: block;
+      border-left: 30px solid transparent;
+      border-bottom: 80px solid $white;
+      border-right: 30px solid transparent;
+      top: -100%;
+      left: 50%;
+      margin-left: -30px;
+    }
+    &:after {
+      content: '';
+      height: 0;
+      width: 0;
+      display: block;
+      border-left: 100px solid transparent;
+      border-bottom: 70px solid $white;
+      border-right: 100px solid transparent;
+      transform: rotate(-35deg);
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.red {
+  background-color: $red;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.green {
+  background-color: $green;
+}
+
+.white {
+  background-color: $white;
+}
