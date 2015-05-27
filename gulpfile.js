@@ -25,7 +25,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./app/*')
+  return gulp.src('app/**/*').pipe(ghPages());
 });
 
 gulp.task('default', ['watch', 'sass']);
